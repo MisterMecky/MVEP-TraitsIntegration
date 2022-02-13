@@ -1,0 +1,1141 @@
+<Patch>
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Vanilla Traits Expanded</li>
+        </mods>
+
+        <match Class="PatchOperationSequence" MayRequire="ludeon.rimworld.ideology">
+            <success>Always</success>
+            <operations>
+
+                <!-- XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX -->
+                <!-- VTE_Insatiable -->
+                <!-- XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX -->
+                
+                <!-- <li Class="PatchOperationAdd">
+                    <xpath>Defs/PreceptDef[defName="Lovin_Prohibited" or defName="Lovin_Horrible" or defName="Lovin_SpouseOnly_Strict"
+                     or defName="Lovin_SpouseOnly_Moderate" or defName="Lovin_SpouseOnly_Mild"]/comps/li[@Class="PreceptComp_UnwillingToDo"]</xpath>
+                    <value>
+                        <nullifyingTraits>
+                            <li>VTE_Insatiable</li>
+                        </nullifyingTraits>
+                    </value>
+                </li> -->
+
+                <!-- "Lovin_Prohibited" -->
+
+                <li Class="PatchOperationConditional">
+                    <success>Always</success>
+                    <xpath>Defs/PreceptDef[defName="Lovin_Prohibited"]/comps/li[@Class="PreceptComp_UnwillingToDo"]/nullifyingTraits</xpath>
+                    <nomatch Class="PatchOperationAdd">
+                        <xpath>Defs/PreceptDef[defName="Lovin_Prohibited"]/comps/li[@Class="PreceptComp_UnwillingToDo"]</xpath>
+                        <value>
+                            <nullifyingTraits>    
+                                <li>VTE_Insatiable</li>
+                            </nullifyingTraits>
+                        </value>
+                    </nomatch>
+                    <match Class="PatchOperationAdd">
+                        <xpath>Defs/PreceptDef[defName="Lovin_Prohibited"]/comps/li[@Class="PreceptComp_UnwillingToDo"]/nullifyingTraits</xpath>
+                        <value>
+                            <li>VTE_Insatiable</li>
+                        </value>
+                    </match>
+                </li>
+
+                <!-- "Lovin_Horrible" -->
+
+                <li Class="PatchOperationConditional">
+                    <success>Always</success>
+                    <xpath>Defs/PreceptDef[defName="Lovin_Horrible"]/comps/li[@Class="PreceptComp_UnwillingToDo"]/nullifyingTraits</xpath>
+                    <nomatch Class="PatchOperationAdd">
+                        <xpath>Defs/PreceptDef[defName="Lovin_Horrible"]/comps/li[@Class="PreceptComp_UnwillingToDo"]</xpath>
+                        <value>
+                            <nullifyingTraits>    
+                                <li>VTE_Insatiable</li>
+                            </nullifyingTraits>
+                        </value>
+                    </nomatch>
+                    <match Class="PatchOperationAdd">
+                        <xpath>Defs/PreceptDef[defName="Lovin_Horrible"]/comps/li[@Class="PreceptComp_UnwillingToDo"]/nullifyingTraits</xpath>
+                        <value>
+                            <li>VTE_Insatiable</li>
+                        </value>
+                    </match>
+                </li>
+
+                <!-- "Lovin_SpouseOnly_Strict" -->
+
+                <li Class="PatchOperationConditional">
+                    <success>Always</success>
+                    <xpath>Defs/PreceptDef[defName="Lovin_SpouseOnly_Strict"]/comps/li[@Class="PreceptComp_UnwillingToDo"]/nullifyingTraits</xpath>
+                    <nomatch Class="PatchOperationAdd">
+                        <xpath>Defs/PreceptDef[defName="Lovin_SpouseOnly_Strict"]/comps/li[@Class="PreceptComp_UnwillingToDo"]</xpath>
+                        <value>
+                            <nullifyingTraits>    
+                                <li>VTE_Insatiable</li>
+                            </nullifyingTraits>
+                        </value>
+                    </nomatch>
+                    <match Class="PatchOperationAdd">
+                        <xpath>Defs/PreceptDef[defName="Lovin_SpouseOnly_Strict"]/comps/li[@Class="PreceptComp_UnwillingToDo"]/nullifyingTraits</xpath>
+                        <value>
+                            <li>VTE_Insatiable</li>
+                        </value>
+                    </match>
+                </li>
+
+                <!-- "Lovin_SpouseOnly_Moderate" -->
+
+                <li Class="PatchOperationConditional">
+                    <success>Always</success>
+                    <xpath>Defs/PreceptDef[defName="Lovin_SpouseOnly_Moderate"]/comps/li[@Class="PreceptComp_UnwillingToDo"]/nullifyingTraits</xpath>
+                    <nomatch Class="PatchOperationAdd">
+                        <xpath>Defs/PreceptDef[defName="Lovin_SpouseOnly_Moderate"]/comps/li[@Class="PreceptComp_UnwillingToDo"]</xpath>
+                        <value>
+                            <nullifyingTraits>    
+                                <li>VTE_Insatiable</li>
+                            </nullifyingTraits>
+                        </value>
+                    </nomatch>
+                    <match Class="PatchOperationAdd">
+                        <xpath>Defs/PreceptDef[defName="Lovin_SpouseOnly_Moderate"]/comps/li[@Class="PreceptComp_UnwillingToDo"]/nullifyingTraits</xpath>
+                        <value>
+                            <li>VTE_Insatiable</li>
+                        </value>
+                    </match>
+                </li>
+
+                <!-- "Lovin_SpouseOnly_Mild" -->
+
+                <li Class="PatchOperationConditional">
+                    <success>Always</success>
+                    <xpath>Defs/PreceptDef[defName="Lovin_SpouseOnly_Mild"]/comps/li[@Class="PreceptComp_UnwillingToDo"]/nullifyingTraits</xpath>
+                    <nomatch Class="PatchOperationAdd">
+                        <xpath>Defs/PreceptDef[defName="Lovin_SpouseOnly_Mild"]/comps/li[@Class="PreceptComp_UnwillingToDo"]</xpath>
+                        <value>
+                            <nullifyingTraits>    
+                                <li>VTE_Insatiable</li>
+                            </nullifyingTraits>
+                        </value>
+                    </nomatch>
+                    <match Class="PatchOperationAdd">
+                        <xpath>Defs/PreceptDef[defName="Lovin_SpouseOnly_Mild"]/comps/li[@Class="PreceptComp_UnwillingToDo"]/nullifyingTraits</xpath>
+                        <value>
+                            <li>VTE_Insatiable</li>
+                        </value>
+                    </match>
+                </li>
+
+
+                <!-- <li Class="PatchOperationAdd">
+                    <xpath>Defs/ThoughtDef[defName="GotLovin_Abhorrent" or defName="Lovin_Know_Abhorrent" or defName="GotLovin_Horrible"
+                     or defName="Lovin_Know_Horrible" or defName="GotLovin_Disapproved" or defName="Lovin_Know_Disapproved"]</xpath>
+                    <value>
+                        <nullifyingTraits>
+                            <li>VTE_Insatiable</li>
+                        </nullifyingTraits>
+                    </value>
+                </li> -->
+
+                <!-- "GotLovin_Abhorrent" -->
+
+                <li Class="PatchOperationConditional">
+                    <success>Always</success>
+                    <xpath>Defs/ThoughtDef[defName="GotLovin_Abhorrent"]/nullifyingTraits</xpath>
+                    <nomatch Class="PatchOperationAdd">
+                        <xpath>Defs/ThoughtDef[defName="GotLovin_Abhorrent"]</xpath>
+                        <value>
+                            <nullifyingTraits>    
+                                <li>VTE_Insatiable</li>
+                            </nullifyingTraits>
+                        </value>
+                    </nomatch>
+                    <match Class="PatchOperationAdd">
+                        <xpath>Defs/ThoughtDef[defName="GotLovin_Abhorrent"]/nullifyingTraits</xpath>
+                        <value>
+                            <li>VTE_Insatiable</li>
+                        </value>
+                    </match>
+                </li>
+
+                <!-- "Lovin_Know_Abhorrent" -->
+
+                <li Class="PatchOperationConditional">
+                    <success>Always</success>
+                    <xpath>Defs/ThoughtDef[defName="Lovin_Know_Abhorrent"]/nullifyingTraits</xpath>
+                    <nomatch Class="PatchOperationAdd">
+                        <xpath>Defs/ThoughtDef[defName="Lovin_Know_Abhorrent"]</xpath>
+                        <value>
+                            <nullifyingTraits>    
+                                <li>VTE_Insatiable</li>
+                            </nullifyingTraits>
+                        </value>
+                    </nomatch>
+                    <match Class="PatchOperationAdd">
+                        <xpath>Defs/ThoughtDef[defName="Lovin_Know_Abhorrent"]/nullifyingTraits</xpath>
+                        <value>
+                            <li>VTE_Insatiable</li>
+                        </value>
+                    </match>
+                </li>
+
+                <!-- "GotLovin_Horrible" -->
+
+                <li Class="PatchOperationConditional">
+                    <success>Always</success>
+                    <xpath>Defs/ThoughtDef[defName="GotLovin_Horrible"]/nullifyingTraits</xpath>
+                    <nomatch Class="PatchOperationAdd">
+                        <xpath>Defs/ThoughtDef[defName="GotLovin_Horrible"]</xpath>
+                        <value>
+                            <nullifyingTraits>    
+                                <li>VTE_Insatiable</li>
+                            </nullifyingTraits>
+                        </value>
+                    </nomatch>
+                    <match Class="PatchOperationAdd">
+                        <xpath>Defs/ThoughtDef[defName="GotLovin_Horrible"]/nullifyingTraits</xpath>
+                        <value>
+                            <li>VTE_Insatiable</li>
+                        </value>
+                    </match>
+                </li>
+
+                <!-- "Lovin_Know_Horrible" -->
+                
+                <li Class="PatchOperationConditional">
+                    <success>Always</success>
+                    <xpath>Defs/ThoughtDef[defName="Lovin_Know_Horrible"]/nullifyingTraits</xpath>
+                    <nomatch Class="PatchOperationAdd">
+                        <xpath>Defs/ThoughtDef[defName="Lovin_Know_Horrible"]</xpath>
+                        <value>
+                            <nullifyingTraits>    
+                                <li>VTE_Insatiable</li>
+                            </nullifyingTraits>
+                        </value>
+                    </nomatch>
+                    <match Class="PatchOperationAdd">
+                        <xpath>Defs/ThoughtDef[defName="Lovin_Know_Horrible"]/nullifyingTraits</xpath>
+                        <value>
+                            <li>VTE_Insatiable</li>
+                        </value>
+                    </match>
+                </li>
+
+                <!-- "GotLovin_Disapproved" -->
+
+                <li Class="PatchOperationConditional">
+                    <success>Always</success>
+                    <xpath>Defs/ThoughtDef[defName="GotLovin_Disapproved"]/nullifyingTraits</xpath>
+                    <nomatch Class="PatchOperationAdd">
+                        <xpath>Defs/ThoughtDef[defName="GotLovin_Disapproved"]</xpath>
+                        <value>
+                            <nullifyingTraits>    
+                                <li>VTE_Insatiable</li>
+                            </nullifyingTraits>
+                        </value>
+                    </nomatch>
+                    <match Class="PatchOperationAdd">
+                        <xpath>Defs/ThoughtDef[defName="GotLovin_Disapproved"]/nullifyingTraits</xpath>
+                        <value>
+                            <li>VTE_Insatiable</li>
+                        </value>
+                    </match>
+                </li>
+
+                <!-- "Lovin_Know_Disapproved" -->
+
+                <li Class="PatchOperationConditional">
+                    <success>Always</success>
+                    <xpath>Defs/ThoughtDef[defName="Lovin_Know_Disapproved"]/nullifyingTraits</xpath>
+                    <nomatch Class="PatchOperationAdd">
+                        <xpath>Defs/ThoughtDef[defName="Lovin_Know_Disapproved"]</xpath>
+                        <value>
+                            <nullifyingTraits>    
+                                <li>VTE_Insatiable</li>
+                            </nullifyingTraits>
+                        </value>
+                    </nomatch>
+                    <match Class="PatchOperationAdd">
+                        <xpath>Defs/ThoughtDef[defName="Lovin_Know_Disapproved"]/nullifyingTraits</xpath>
+                        <value>
+                            <li>VTE_Insatiable</li>
+                        </value>
+                    </match>
+                </li>
+
+                <!-- XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX -->
+                <!-- VTE_Stoner + VTE_Lush -->
+                <!-- XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX -->
+                
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs/PreceptDef[defName="DrugUse_Prohibited" or defName="DrugUse_MedicalOnly" or defName="DrugUse_MedicalOrSocial"]
+                    /comps/li[@Class="PreceptComp_UnwillingToDo"]/nullifyingTraits</xpath>
+                    <value>
+                        <li>VTE_Stoner</li>
+                        <li>VTE_Lush</li>
+                    </value>
+                </li>
+
+                <!-- <li Class="PatchOperationAdd">
+                    <xpath>Defs/ThoughtDef[defName="IngestedDrug_Horrible" or defName="IngestedRecreationalDrug_Horrible" or defName="IngestedHardDrug_Horrible"
+                     or defName="IngestedDrug_Know_Horrible" or defName="IngestedRecreationalDrug_Know_Horrible" or defName="IngestedHardDrug_Know_Horrible"
+                      or defName="AdministeredDrug_Horrible" or defName="AdministeredRecreationalDrug_Horrible" or defName="AdministeredHardDrug_Horrible"
+                       or defName="AdministeredDrug_Know_Horrible" or defName="AdministeredRecreationalDrug_Know_Horrible"
+                        or defName="AdministeredHardDrug_Know_Horrible"]</xpath>
+                    <value>
+                        <nullifyingTraits>    
+                            <li>VTE_Stoner</li>
+                            <li>VTE_Lush</li>
+                        </nullifyingTraits>
+                    </value>
+                </li> -->
+
+                <!-- "IngestedDrug_Horrible"  -->
+
+                <li Class="PatchOperationConditional">
+                    <success>Always</success>
+                    <xpath>Defs/ThoughtDef[defName="IngestedDrug_Horrible"]/nullifyingTraits</xpath>
+                    <nomatch Class="PatchOperationAdd">
+                        <xpath>Defs/ThoughtDef[defName="IngestedDrug_Horrible"]</xpath>
+                        <value>
+                            <nullifyingTraits>    
+                                <li>VTE_Stoner</li>
+                                <li>VTE_Lush</li>
+                            </nullifyingTraits>
+                        </value>
+                    </nomatch>
+                    <match Class="PatchOperationAdd">
+                        <xpath>Defs/ThoughtDef[defName="IngestedDrug_Horrible"]/nullifyingTraits</xpath>
+                        <value>
+                            <li>VTE_Stoner</li>
+                            <li>VTE_Lush</li>
+                        </value>
+                    </match>
+                </li>
+
+                <!-- "IngestedRecreationalDrug_Horrible"  -->
+
+                <li Class="PatchOperationConditional">
+                    <success>Always</success>
+                    <xpath>Defs/ThoughtDef[defName="IngestedRecreationalDrug_Horrible"]/nullifyingTraits</xpath>
+                    <nomatch Class="PatchOperationAdd">
+                        <xpath>Defs/ThoughtDef[defName="IngestedRecreationalDrug_Horrible"]</xpath>
+                        <value>
+                            <nullifyingTraits>    
+                                <li>VTE_Stoner</li>
+                                <li>VTE_Lush</li>
+                            </nullifyingTraits>
+                        </value>
+                    </nomatch>
+                    <match Class="PatchOperationAdd">
+                        <xpath>Defs/ThoughtDef[defName="IngestedRecreationalDrug_Horrible"]/nullifyingTraits</xpath>
+                        <value>
+                            <li>VTE_Stoner</li>
+                            <li>VTE_Lush</li>
+                        </value>
+                    </match>
+                </li>
+
+                <!-- "IngestedHardDrug_Horrible" -->
+
+                <li Class="PatchOperationConditional">
+                    <success>Always</success>
+                    <xpath>Defs/ThoughtDef[defName="IngestedHardDrug_Horrible"]/nullifyingTraits</xpath>
+                    <nomatch Class="PatchOperationAdd">
+                        <xpath>Defs/ThoughtDef[defName="IngestedHardDrug_Horrible"]</xpath>
+                        <value>
+                            <nullifyingTraits>    
+                                <li>VTE_Stoner</li>
+                                <li>VTE_Lush</li>
+                            </nullifyingTraits>
+                        </value>
+                    </nomatch>
+                    <match Class="PatchOperationAdd">
+                        <xpath>Defs/ThoughtDef[defName="IngestedHardDrug_Horrible"]/nullifyingTraits</xpath>
+                        <value>
+                            <li>VTE_Stoner</li>
+                            <li>VTE_Lush</li>
+                        </value>
+                    </match>
+                </li>
+
+                <!-- "IngestedDrug_Know_Horrible"  -->
+
+                <li Class="PatchOperationConditional">
+                    <success>Always</success>
+                    <xpath>Defs/ThoughtDef[defName="IngestedDrug_Know_Horrible"]/nullifyingTraits</xpath>
+                    <nomatch Class="PatchOperationAdd">
+                        <xpath>Defs/ThoughtDef[defName="IngestedDrug_Know_Horrible"]</xpath>
+                        <value>
+                            <nullifyingTraits>    
+                                <li>VTE_Stoner</li>
+                                <li>VTE_Lush</li>
+                            </nullifyingTraits>
+                        </value>
+                    </nomatch>
+                    <match Class="PatchOperationAdd">
+                        <xpath>Defs/ThoughtDef[defName="IngestedDrug_Know_Horrible"]/nullifyingTraits</xpath>
+                        <value>
+                            <li>VTE_Stoner</li>
+                            <li>VTE_Lush</li>
+                        </value>
+                    </match>
+                </li>
+
+                <!-- "IngestedRecreationalDrug_Know_Horrible"  -->
+
+                <li Class="PatchOperationConditional">
+                    <success>Always</success>
+                    <xpath>Defs/ThoughtDef[defName="IngestedRecreationalDrug_Know_Horrible"]/nullifyingTraits</xpath>
+                    <nomatch Class="PatchOperationAdd">
+                        <xpath>Defs/ThoughtDef[defName="IngestedRecreationalDrug_Know_Horrible"]</xpath>
+                        <value>
+                            <nullifyingTraits>    
+                                <li>VTE_Stoner</li>
+                                <li>VTE_Lush</li>
+                            </nullifyingTraits>
+                        </value>
+                    </nomatch>
+                    <match Class="PatchOperationAdd">
+                        <xpath>Defs/ThoughtDef[defName="IngestedRecreationalDrug_Know_Horrible"]/nullifyingTraits</xpath>
+                        <value>
+                            <li>VTE_Stoner</li>
+                            <li>VTE_Lush</li>
+                        </value>
+                    </match>
+                </li>
+
+                <!-- "IngestedHardDrug_Know_Horrible" -->
+
+                <li Class="PatchOperationConditional">
+                    <success>Always</success>
+                    <xpath>Defs/ThoughtDef[defName="IngestedHardDrug_Know_Horrible"]/nullifyingTraits</xpath>
+                    <nomatch Class="PatchOperationAdd">
+                        <xpath>Defs/ThoughtDef[defName="IngestedHardDrug_Know_Horrible"]</xpath>
+                        <value>
+                            <nullifyingTraits>    
+                                <li>VTE_Stoner</li>
+                                <li>VTE_Lush</li>
+                            </nullifyingTraits>
+                        </value>
+                    </nomatch>
+                    <match Class="PatchOperationAdd">
+                        <xpath>Defs/ThoughtDef[defName="IngestedHardDrug_Know_Horrible"]/nullifyingTraits</xpath>
+                        <value>
+                            <li>VTE_Stoner</li>
+                            <li>VTE_Lush</li>
+                        </value>
+                    </match>
+                </li>
+
+                <!-- "AdministeredDrug_Horrible"  -->
+
+                <li Class="PatchOperationConditional">
+                    <success>Always</success>
+                    <xpath>Defs/ThoughtDef[defName="AdministeredDrug_Horrible"]/nullifyingTraits</xpath>
+                    <nomatch Class="PatchOperationAdd">
+                        <xpath>Defs/ThoughtDef[defName="AdministeredDrug_Horrible"]</xpath>
+                        <value>
+                            <nullifyingTraits>    
+                                <li>VTE_Stoner</li>
+                                <li>VTE_Lush</li>
+                            </nullifyingTraits>
+                        </value>
+                    </nomatch>
+                    <match Class="PatchOperationAdd">
+                        <xpath>Defs/ThoughtDef[defName="AdministeredDrug_Horrible"]/nullifyingTraits</xpath>
+                        <value>
+                            <li>VTE_Stoner</li>
+                            <li>VTE_Lush</li>
+                        </value>
+                    </match>
+                </li>
+
+                <!-- "AdministeredRecreationalDrug_Horrible"  -->
+
+                <li Class="PatchOperationConditional">
+                    <success>Always</success>
+                    <xpath>Defs/ThoughtDef[defName="AdministeredRecreationalDrug_Horrible"]/nullifyingTraits</xpath>
+                    <nomatch Class="PatchOperationAdd">
+                        <xpath>Defs/ThoughtDef[defName="AdministeredRecreationalDrug_Horrible"]</xpath>
+                        <value>
+                            <nullifyingTraits>    
+                                <li>VTE_Stoner</li>
+                                <li>VTE_Lush</li>
+                            </nullifyingTraits>
+                        </value>
+                    </nomatch>
+                    <match Class="PatchOperationAdd">
+                        <xpath>Defs/ThoughtDef[defName="AdministeredRecreationalDrug_Horrible"]/nullifyingTraits</xpath>
+                        <value>
+                            <li>VTE_Stoner</li>
+                            <li>VTE_Lush</li>
+                        </value>
+                    </match>
+                </li>
+
+                <!-- "AdministeredHardDrug_Horrible" -->
+
+                <li Class="PatchOperationConditional">
+                    <success>Always</success>
+                    <xpath>Defs/ThoughtDef[defName="AdministeredHardDrug_Horrible"]/nullifyingTraits</xpath>
+                    <nomatch Class="PatchOperationAdd">
+                        <xpath>Defs/ThoughtDef[defName="AdministeredHardDrug_Horrible"]</xpath>
+                        <value>
+                            <nullifyingTraits>    
+                                <li>VTE_Stoner</li>
+                                <li>VTE_Lush</li>
+                            </nullifyingTraits>
+                        </value>
+                    </nomatch>
+                    <match Class="PatchOperationAdd">
+                        <xpath>Defs/ThoughtDef[defName="AdministeredHardDrug_Horrible"]/nullifyingTraits</xpath>
+                        <value>
+                            <li>VTE_Stoner</li>
+                            <li>VTE_Lush</li>
+                        </value>
+                    </match>
+                </li>
+
+                <!-- "AdministeredDrug_Know_Horrible"  -->
+
+                <li Class="PatchOperationConditional">
+                    <success>Always</success>
+                    <xpath>Defs/ThoughtDef[defName="AdministeredDrug_Know_Horrible"]/nullifyingTraits</xpath>
+                    <nomatch Class="PatchOperationAdd">
+                        <xpath>Defs/ThoughtDef[defName="AdministeredDrug_Know_Horrible"]</xpath>
+                        <value>
+                            <nullifyingTraits>    
+                                <li>VTE_Stoner</li>
+                                <li>VTE_Lush</li>
+                            </nullifyingTraits>
+                        </value>
+                    </nomatch>
+                    <match Class="PatchOperationAdd">
+                        <xpath>Defs/ThoughtDef[defName="AdministeredDrug_Know_Horrible"]/nullifyingTraits</xpath>
+                        <value>
+                            <li>VTE_Stoner</li>
+                            <li>VTE_Lush</li>
+                        </value>
+                    </match>
+                </li>
+
+                <!-- "AdministeredRecreationalDrug_Know_Horrible" -->
+
+                <li Class="PatchOperationConditional">
+                    <success>Always</success>
+                    <xpath>Defs/ThoughtDef[defName="AdministeredRecreationalDrug_Know_Horrible"]/nullifyingTraits</xpath>
+                    <nomatch Class="PatchOperationAdd">
+                        <xpath>Defs/ThoughtDef[defName="AdministeredRecreationalDrug_Know_Horrible"]</xpath>
+                        <value>
+                            <nullifyingTraits>    
+                                <li>VTE_Stoner</li>
+                                <li>VTE_Lush</li>
+                            </nullifyingTraits>
+                        </value>
+                    </nomatch>
+                    <match Class="PatchOperationAdd">
+                        <xpath>Defs/ThoughtDef[defName="AdministeredRecreationalDrug_Know_Horrible"]/nullifyingTraits</xpath>
+                        <value>
+                            <li>VTE_Stoner</li>
+                            <li>VTE_Lush</li>
+                        </value>
+                    </match>
+                </li>
+
+                <!-- "AdministeredHardDrug_Know_Horrible" -->
+
+                <li Class="PatchOperationConditional">
+                    <success>Always</success>
+                    <xpath>Defs/ThoughtDef[defName="AdministeredHardDrug_Know_Horrible"]/nullifyingTraits</xpath>
+                    <nomatch Class="PatchOperationAdd">
+                        <xpath>Defs/ThoughtDef[defName="AdministeredHardDrug_Know_Horrible"]</xpath>
+                        <value>
+                            <nullifyingTraits>    
+                                <li>VTE_Stoner</li>
+                                <li>VTE_Lush</li>
+                            </nullifyingTraits>
+                        </value>
+                    </nomatch>
+                    <match Class="PatchOperationAdd">
+                        <xpath>Defs/ThoughtDef[defName="AdministeredHardDrug_Know_Horrible"]/nullifyingTraits</xpath>
+                        <value>
+                            <li>VTE_Stoner</li>
+                            <li>VTE_Lush</li>
+                        </value>
+                    </match>
+                </li>
+
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs/MemeDef[defName="HighLife"]/agreeableTraits</xpath>
+                    <value>
+                        <li>VTE_Stoner</li>
+                    </value>
+                </li>
+                <!-- XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX -->
+                <!-- VTE_AnimalLover + VTE_AnimalHater -->
+                <!-- XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX -->
+
+                <!-- <li Class="patchOperationAdd">
+                    <xpath>Defs/MemeDef[defName="Rancher" or defName="HumanPrimacy" or defName="AnimalPersonhood"]</xpath>
+                    <value>
+                        <agreeableTraits />
+                        <disagreeableTraits />
+                    </value>
+                </li> -->
+
+                <!-- <li Class="PatchOperationAdd">
+                    <xpath>Defs/MemeDef[defName="Rancher" or defName="HumanPrimacy"]/disagreeableTraits</xpath>
+                    <value>
+                        <li>VTE_AnimalLover</li>
+                    </value>
+                </li> -->
+
+                <!-- <li Class="PatchOperationAdd">
+                    <xpath>Defs/MemeDef[defName="AnimalPersonhood"]/agreeableTraits</xpath>
+                    <value>
+                        <li>VTE_AnimalLover</li>
+                    </value>
+                </li> -->
+
+                <!-- Rancher -->
+
+                <li Class="PatchOperationConditional">
+                    <success>Always</success>
+                    <xpath>Defs/MemeDef[defName="Rancher"]/disagreeableTraits</xpath>
+                    <nomatch Class="PatchOperationAdd">
+                        <xpath>Defs/MemeDef[defName="Rancher"]</xpath>
+                        <value>
+                            <disagreeableTraits>    
+                                <li>VTE_AnimalLover</li>
+                            </disagreeableTraits>
+                        </value>
+                    </nomatch>
+                    <match Class="PatchOperationAdd">
+                        <xpath>Defs/MemeDef[defName="Rancher"]/disagreeableTraits</xpath>
+                        <value>
+                            <li>VTE_AnimalLover</li>
+                        </value>
+                    </match>
+                </li>
+
+                <li Class="PatchOperationConditional">
+                    <success>Always</success>
+                    <xpath>Defs/MemeDef[defName="Rancher"]/agreeableTraits</xpath>
+                    <nomatch Class="PatchOperationAdd">
+                        <xpath>Defs/MemeDef[defName="Rancher"]</xpath>
+                        <value>
+                            <agreeableTraits>    
+                                <li>VTE_AnimalHater</li>
+                            </agreeableTraits>
+                        </value>
+                    </nomatch>
+                    <match Class="PatchOperationAdd">
+                        <xpath>Defs/MemeDef[defName="Rancher"]/agreeableTraits</xpath>
+                        <value>
+                            <li>VTE_AnimalHater</li>
+                        </value>
+                    </match>
+                </li>
+
+                <!-- HumanPrimacy -->
+
+                <li Class="PatchOperationConditional">
+                    <success>Always</success>
+                    <xpath>Defs/MemeDef[defName="HumanPrimacy"]/disagreeableTraits</xpath>
+                    <nomatch Class="PatchOperationAdd">
+                        <xpath>Defs/MemeDef[defName="HumanPrimacy"]</xpath>
+                        <value>
+                            <disagreeableTraits>    
+                                <li>VTE_AnimalLover</li>
+                            </disagreeableTraits>
+                        </value>
+                    </nomatch>
+                    <match Class="PatchOperationAdd">
+                        <xpath>Defs/MemeDef[defName="HumanPrimacy"]/disagreeableTraits</xpath>
+                        <value>
+                            <li>VTE_AnimalLover</li>
+                        </value>
+                    </match>
+                </li>
+
+                <li Class="PatchOperationConditional">
+                    <success>Always</success>
+                    <xpath>Defs/MemeDef[defName="HumanPrimacy"]/agreeableTraits</xpath>
+                    <nomatch Class="PatchOperationAdd">
+                        <xpath>Defs/MemeDef[defName="HumanPrimacy"]</xpath>
+                        <value>
+                            <agreeableTraits>    
+                                <li>VTE_AnimalHater</li>
+                            </agreeableTraits>
+                        </value>
+                    </nomatch>
+                    <match Class="PatchOperationAdd">
+                        <xpath>Defs/MemeDef[defName="HumanPrimacy"]/agreeableTraits</xpath>
+                        <value>
+                            <li>VTE_AnimalHater</li>
+                        </value>
+                    </match>
+                </li>
+
+                <!-- AnimalPersonhood -->
+
+                <li Class="PatchOperationConditional">
+                    <success>Always</success>
+                    <xpath>Defs/MemeDef[defName="AnimalPersonhood"]/agreeableTraits</xpath>
+                    <nomatch Class="PatchOperationAdd">
+                        <xpath>Defs/MemeDef[defName="AnimalPersonhood"]</xpath>
+                        <value>
+                            <agreeableTraits>    
+                                <li>VTE_AnimalLover</li>
+                            </agreeableTraits>
+                        </value>
+                    </nomatch>
+                    <match Class="PatchOperationAdd">
+                        <xpath>Defs/MemeDef[defName="AnimalPersonhood"]/agreeableTraits</xpath>
+                        <value>
+                            <li>VTE_AnimalLover</li>
+                        </value>
+                    </match>
+                </li>
+
+                <li Class="PatchOperationConditional">
+                    <success>Always</success>
+                    <xpath>Defs/MemeDef[defName="AnimalPersonhood"]/disagreeableTraits</xpath>
+                    <nomatch Class="PatchOperationAdd">
+                        <xpath>Defs/MemeDef[defName="AnimalPersonhood"]</xpath>
+                        <value>
+                            <disagreeableTraits>    
+                                <li>VTE_AnimalHater</li>
+                            </disagreeableTraits>
+                        </value>
+                    </nomatch>
+                    <match Class="PatchOperationAdd">
+                        <xpath>Defs/MemeDef[defName="AnimalPersonhood"]/disagreeableTraits</xpath>
+                        <value>
+                            <li>VTE_AnimalHater</li>
+                        </value>
+                    </match>
+                </li>
+
+                <!-- <li Class="PatchOperationAdd">
+                    <xpath>Defs/PreceptDef[defName="Bonding_Disapproved"]/comps/li[@Class="PreceptComp_UnwillingToDo"]</xpath>
+                    <value>
+                        <nullifyingTraits>
+                            <li>VTE_AnimalLover</li>
+                        </nullifyingTraits>
+                    </value>
+                </li> -->
+
+                <li Class="PatchOperationConditional">
+                    <success>Always</success>
+                    <xpath>Defs/PreceptDef[defName="Bonding_Disapproved"]/comps/li[@Class="PreceptComp_UnwillingToDo"]/nullifyingTraits</xpath>
+                    <nomatch Class="PatchOperationAdd">
+                        <xpath>Defs/PreceptDef[defName="Bonding_Disapproved"]/comps/li[@Class="PreceptComp_UnwillingToDo"]</xpath>
+                        <value>
+                            <nullifyingTraits>    
+                                <li>VTE_AnimalLover</li>
+                            </nullifyingTraits>
+                        </value>
+                    </nomatch>
+                    <match Class="PatchOperationAdd">
+                        <xpath>Defs/PreceptDef[defName="Bonding_Disapproved"]/comps/li[@Class="PreceptComp_UnwillingToDo"]/nullifyingTraits</xpath>
+                        <value>
+                            <li>VTE_AnimalLover</li>
+                        </value>
+                    </match>
+                </li>
+
+                <!-- <li Class="PatchOperationAdd">
+                    <xpath>Defs/MemeDef[defName="Rancher" or defName="HumanPrimacy"]/agreeableTraits</xpath>
+                    <value>
+                        <li>VTE_AnimalHater</li>
+                    </value>
+                </li> -->
+
+                <!-- <li Class="PatchOperationAdd">
+                    <xpath>Defs/MemeDef[defName="AnimalPersonhood"]/disagreeableTraits</xpath>
+                    <value>
+                        <li>VTE_AnimalHater</li>
+                    </value>
+                </li> -->
+
+                <!-- XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX -->
+                <!-- VTE_Menagerist -->
+                <!-- XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX -->
+
+                <!-- <li Class="PatchOperationAdd">
+                    <xpath>Defs/ThoughtDef[defName="Ranching_Central_AnimalMassPerCapita"]</xpath>
+                    <value>
+                        <nullifyingTraits>    
+                            <li>VTE_Menagerist</li>
+                        </nullifyingTraits>
+                    </value>
+                </li> -->
+
+                <li Class="PatchOperationConditional">
+                    <success>Always</success>
+                    <xpath>Defs/ThoughtDef[defName="Ranching_Central_AnimalMassPerCapita"]/nullifyingTraits</xpath>
+                    <nomatch Class="PatchOperationAdd">
+                        <xpath>Defs/ThoughtDef[defName="Ranching_Central_AnimalMassPerCapita"]</xpath>
+                        <value>
+                            <nullifyingTraits>    
+                                <li>VTE_Menagerist</li>
+                            </nullifyingTraits>
+                        </value>
+                    </nomatch>
+                    <match Class="PatchOperationAdd">
+                        <xpath>Defs/ThoughtDef[defName="Ranching_Central_AnimalMassPerCapita"]/nullifyingTraits</xpath>
+                        <value>
+                            <li>VTE_Menagerist</li>
+                        </value>
+                    </match>
+                </li>
+
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs/MemeDef[defName="Rancher"]/agreeableTraits</xpath>
+                    <value>
+                        <li>VTE_Menagerist</li>
+                    </value>
+                </li>
+
+                <!-- XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX -->
+                <!-- VTE_Technophobe -->
+                <!-- XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX -->
+
+                <!-- <li Class="PatchOperationAdd">
+                    <xpath>Defs/ThoughtDef[defName="SleptUsingSleepAccelerator" or defName="NeedNeuralSupercharge" or defName="AgeReversalDemanded"
+                     or defName="AgeReversalReceived"]</xpath>
+                    <value>
+                        <nullifyingTraits>    
+                            <li>VTE_Technophobe</li>
+                        </nullifyingTraits>
+                    </value>
+                </li> -->
+
+                <!-- "SleptUsingSleepAccelerator" -->
+
+                <li Class="PatchOperationConditional">
+                    <success>Always</success>
+                    <xpath>Defs/ThoughtDef[defName="SleptUsingSleepAccelerator"]/nullifyingTraits</xpath>
+                    <nomatch Class="PatchOperationAdd">
+                        <xpath>Defs/ThoughtDef[defName="SleptUsingSleepAccelerator"]</xpath>
+                        <value>
+                            <nullifyingTraits>    
+                                <li>VTE_Technophobe</li>
+                            </nullifyingTraits>
+                        </value>
+                    </nomatch>
+                    <match Class="PatchOperationAdd">
+                        <xpath>Defs/ThoughtDef[defName="SleptUsingSleepAccelerator"]/nullifyingTraits</xpath>
+                        <value>
+                            <li>VTE_Technophobe</li>
+                        </value>
+                    </match>
+                </li>
+
+                <!-- "NeedNeuralSupercharge" -->
+
+                <li Class="PatchOperationConditional">
+                    <success>Always</success>
+                    <xpath>Defs/ThoughtDef[defName="NeedNeuralSupercharge"]/nullifyingTraits</xpath>
+                    <nomatch Class="PatchOperationAdd">
+                        <xpath>Defs/ThoughtDef[defName="NeedNeuralSupercharge"]</xpath>
+                        <value>
+                            <nullifyingTraits>    
+                                <li>VTE_Technophobe</li>
+                            </nullifyingTraits>
+                        </value>
+                    </nomatch>
+                    <match Class="PatchOperationAdd">
+                        <xpath>Defs/ThoughtDef[defName="NeedNeuralSupercharge"]/nullifyingTraits</xpath>
+                        <value>
+                            <li>VTE_Technophobe</li>
+                        </value>
+                    </match>
+                </li>
+
+                <!-- "AgeReversalDemanded" -->
+
+                <li Class="PatchOperationConditional">
+                    <success>Always</success>
+                    <xpath>Defs/ThoughtDef[defName="AgeReversalDemanded"]/nullifyingTraits</xpath>
+                    <nomatch Class="PatchOperationAdd">
+                        <xpath>Defs/ThoughtDef[defName="AgeReversalDemanded"]</xpath>
+                        <value>
+                            <nullifyingTraits>    
+                                <li>VTE_Technophobe</li>
+                            </nullifyingTraits>
+                        </value>
+                    </nomatch>
+                    <match Class="PatchOperationAdd">
+                        <xpath>Defs/ThoughtDef[defName="AgeReversalDemanded"]/nullifyingTraits</xpath>
+                        <value>
+                            <li>VTE_Technophobe</li>
+                        </value>
+                    </match>
+                </li>
+
+                <!-- "AgeReversalReceived" -->
+
+                <li Class="PatchOperationConditional">
+                    <success>Always</success>
+                    <xpath>Defs/ThoughtDef[defName="AgeReversalReceived"]/nullifyingTraits</xpath>
+                    <nomatch Class="PatchOperationAdd">
+                        <xpath>Defs/ThoughtDef[defName="AgeReversalReceived"]</xpath>
+                        <value>
+                            <nullifyingTraits>    
+                                <li>VTE_Technophobe</li>
+                            </nullifyingTraits>
+                        </value>
+                    </nomatch>
+                    <match Class="PatchOperationAdd">
+                        <xpath>Defs/ThoughtDef[defName="AgeReversalReceived"]/nullifyingTraits</xpath>
+                        <value>
+                            <li>VTE_Technophobe</li>
+                        </value>
+                    </match>
+                </li>
+
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs/MemeDef[defName="Transhumanist"]/disagreeableTraits</xpath>
+                    <value>
+                        <li>VTE_Technophobe</li>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs/MemeDef[defName="FleshPurity"]/agreeableTraits</xpath>
+                    <value>
+                        <li>VTE_Technophobe</li>
+                    </value>
+                </li>
+
+                <!-- XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX -->
+                <!-- VTE_MadSurgeon -->
+                <!-- XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX -->
+
+                <li Class="PatchOperationAdd">
+                    <xpath>Defs/ThoughtDef[defName="HarvestedOrgan_Abhorrent" or defName="HarvestedOrgan_Know_Abhorrent" or defName="HarvestedOrgan_Know_Abhorrent_Mood"
+                     or defName="HarvestedOrgan_Horrible" or defName="HarvestedOrgan_Know_Horrible" or defName="HarvestedOrgan_Know_Horrible_Mood"]/nullifyingTraits</xpath>
+                    <value>   
+                        <li>VTE_MadSurgeon</li>
+                    </value>
+                </li>
+
+                <!-- <li Class="PatchOperationAdd">
+                    <xpath>Defs/ThoughtDef[defName="TradedOrgan_Abhorrent" or defName="TradedOrgan_Know_Abhorrent" or defName="TradedOrgan_Know_Abhorrent_Mood"
+                     or defName="SoldOrgan_Disapproved" or defName="SoldOrgan_Know_Disapproved" or defName="SoldOrgan_Know_Horrible_Mood"
+                      or defName="InstalledOrgan_Abhorrent" or defName="InstalledOrgan_Know_Abhorrent" or defName="InstalledOrgan_Know_Abhorrent_Mood"]</xpath>
+                    <value>
+                        <nullifyingTraits>    
+                            <li>VTE_MadSurgeon</li>
+                        </nullifyingTraits>
+                    </value>
+                </li> -->
+
+                <!-- "TradedOrgan_Abhorrent" -->
+
+                <li Class="PatchOperationConditional">
+                    <success>Always</success>
+                    <xpath>Defs/ThoughtDef[defName="TradedOrgan_Abhorrent"]/nullifyingTraits</xpath>
+                    <nomatch Class="PatchOperationAdd">
+                        <xpath>Defs/ThoughtDef[defName="TradedOrgan_Abhorrent"]</xpath>
+                        <value>
+                            <nullifyingTraits>    
+                                <li>VTE_MadSurgeon</li>
+                            </nullifyingTraits>
+                        </value>
+                    </nomatch>
+                    <match Class="PatchOperationAdd">
+                        <xpath>Defs/ThoughtDef[defName="TradedOrgan_Abhorrent"]/nullifyingTraits</xpath>
+                        <value>
+                            <li>VTE_MadSurgeon</li>>
+                        </value>
+                    </match>
+                </li>
+
+                <!-- "TradedOrgan_Know_Abhorrent" -->
+
+                <li Class="PatchOperationConditional">
+                    <success>Always</success>
+                    <xpath>Defs/ThoughtDef[defName="TradedOrgan_Know_Abhorrent"]/nullifyingTraits</xpath>
+                    <nomatch Class="PatchOperationAdd">
+                        <xpath>Defs/ThoughtDef[defName="TradedOrgan_Know_Abhorrent"]</xpath>
+                        <value>
+                            <nullifyingTraits>    
+                                <li>VTE_MadSurgeon</li>
+                            </nullifyingTraits>
+                        </value>
+                    </nomatch>
+                    <match Class="PatchOperationAdd">
+                        <xpath>Defs/ThoughtDef[defName="TradedOrgan_Know_Abhorrent"]/nullifyingTraits</xpath>
+                        <value>
+                            <li>VTE_MadSurgeon</li>>
+                        </value>
+                    </match>
+                </li>
+
+                <!-- "TradedOrgan_Know_Abhorrent_Mood" -->
+
+                <li Class="PatchOperationConditional">
+                    <success>Always</success>
+                    <xpath>Defs/ThoughtDef[defName="TradedOrgan_Know_Abhorrent_Mood"]/nullifyingTraits</xpath>
+                    <nomatch Class="PatchOperationAdd">
+                        <xpath>Defs/ThoughtDef[defName="TradedOrgan_Know_Abhorrent_Mood"]</xpath>
+                        <value>
+                            <nullifyingTraits>    
+                                <li>VTE_MadSurgeon</li>
+                            </nullifyingTraits>
+                        </value>
+                    </nomatch>
+                    <match Class="PatchOperationAdd">
+                        <xpath>Defs/ThoughtDef[defName="TradedOrgan_Know_Abhorrent_Mood"]/nullifyingTraits</xpath>
+                        <value>
+                            <li>VTE_MadSurgeon</li>>
+                        </value>
+                    </match>
+                </li>
+
+                <!-- "SoldOrgan_Disapproved" -->
+
+                <li Class="PatchOperationConditional">
+                    <success>Always</success>
+                    <xpath>Defs/ThoughtDef[defName="SoldOrgan_Disapproved"]/nullifyingTraits</xpath>
+                    <nomatch Class="PatchOperationAdd">
+                        <xpath>Defs/ThoughtDef[defName="SoldOrgan_Disapproved"]</xpath>
+                        <value>
+                            <nullifyingTraits>    
+                                <li>VTE_MadSurgeon</li>
+                            </nullifyingTraits>
+                        </value>
+                    </nomatch>
+                    <match Class="PatchOperationAdd">
+                        <xpath>Defs/ThoughtDef[defName="SoldOrgan_Disapproved"]/nullifyingTraits</xpath>
+                        <value>
+                            <li>VTE_MadSurgeon</li>>
+                        </value>
+                    </match>
+                </li>
+
+                <!-- "SoldOrgan_Know_Disapproved" -->
+
+                <li Class="PatchOperationConditional">
+                    <success>Always</success>
+                    <xpath>Defs/ThoughtDef[defName="SoldOrgan_Know_Disapproved"]/nullifyingTraits</xpath>
+                    <nomatch Class="PatchOperationAdd">
+                        <xpath>Defs/ThoughtDef[defName="SoldOrgan_Know_Disapproved"]</xpath>
+                        <value>
+                            <nullifyingTraits>    
+                                <li>VTE_MadSurgeon</li>
+                            </nullifyingTraits>
+                        </value>
+                    </nomatch>
+                    <match Class="PatchOperationAdd">
+                        <xpath>Defs/ThoughtDef[defName="SoldOrgan_Know_Disapproved"]/nullifyingTraits</xpath>
+                        <value>
+                            <li>VTE_MadSurgeon</li>>
+                        </value>
+                    </match>
+                </li>
+
+                <!-- "SoldOrgan_Know_Horrible_Mood" -->
+
+                <li Class="PatchOperationConditional">
+                    <success>Always</success>
+                    <xpath>Defs/ThoughtDef[defName="SoldOrgan_Know_Horrible_Mood"]/nullifyingTraits</xpath>
+                    <nomatch Class="PatchOperationAdd">
+                        <xpath>Defs/ThoughtDef[defName="SoldOrgan_Know_Horrible_Mood"]</xpath>
+                        <value>
+                            <nullifyingTraits>    
+                                <li>VTE_MadSurgeon</li>
+                            </nullifyingTraits>
+                        </value>
+                    </nomatch>
+                    <match Class="PatchOperationAdd">
+                        <xpath>Defs/ThoughtDef[defName="SoldOrgan_Know_Horrible_Mood"]/nullifyingTraits</xpath>
+                        <value>
+                            <li>VTE_MadSurgeon</li>>
+                        </value>
+                    </match>
+                </li>
+
+                <!-- "InstalledOrgan_Abhorrent" -->
+
+                <li Class="PatchOperationConditional">
+                    <success>Always</success>
+                    <xpath>Defs/ThoughtDef[defName="InstalledOrgan_Abhorrent"]/nullifyingTraits</xpath>
+                    <nomatch Class="PatchOperationAdd">
+                        <xpath>Defs/ThoughtDef[defName="InstalledOrgan_Abhorrent"]</xpath>
+                        <value>
+                            <nullifyingTraits>    
+                                <li>VTE_MadSurgeon</li>
+                            </nullifyingTraits>
+                        </value>
+                    </nomatch>
+                    <match Class="PatchOperationAdd">
+                        <xpath>Defs/ThoughtDef[defName="InstalledOrgan_Abhorrent"]/nullifyingTraits</xpath>
+                        <value>
+                            <li>VTE_MadSurgeon</li>>
+                        </value>
+                    </match>
+                </li>
+
+                <!-- "InstalledOrgan_Know_Abhorrent" -->
+
+                <li Class="PatchOperationConditional">
+                    <success>Always</success>
+                    <xpath>Defs/ThoughtDef[defName="InstalledOrgan_Know_Abhorrent"]/nullifyingTraits</xpath>
+                    <nomatch Class="PatchOperationAdd">
+                        <xpath>Defs/ThoughtDef[defName="InstalledOrgan_Know_Abhorrent"]</xpath>
+                        <value>
+                            <nullifyingTraits>    
+                                <li>VTE_MadSurgeon</li>
+                            </nullifyingTraits>
+                        </value>
+                    </nomatch>
+                    <match Class="PatchOperationAdd">
+                        <xpath>Defs/ThoughtDef[defName="InstalledOrgan_Know_Abhorrent"]/nullifyingTraits</xpath>
+                        <value>
+                            <li>VTE_MadSurgeon</li>>
+                        </value>
+                    </match>
+                </li>
+
+                <!-- "InstalledOrgan_Know_Abhorrent_Mood" -->
+
+                <li Class="PatchOperationConditional">
+                    <success>Always</success>
+                    <xpath>Defs/ThoughtDef[defName="InstalledOrgan_Know_Abhorrent_Mood"]/nullifyingTraits</xpath>
+                    <nomatch Class="PatchOperationAdd">
+                        <xpath>Defs/ThoughtDef[defName="InstalledOrgan_Know_Abhorrent_Mood"]</xpath>
+                        <value>
+                            <nullifyingTraits>    
+                                <li>VTE_MadSurgeon</li>
+                            </nullifyingTraits>
+                        </value>
+                    </nomatch>
+                    <match Class="PatchOperationAdd">
+                        <xpath>Defs/ThoughtDef[defName="InstalledOrgan_Know_Abhorrent_Mood"]/nullifyingTraits</xpath>
+                        <value>
+                            <li>VTE_MadSurgeon</li>>
+                        </value>
+                    </match>
+                </li>
+
+                <!-- XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX -->
+                <!-- VTE_Groundbreaker -->
+                <!-- XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX -->
+
+                <!-- <li Class="PatchOperationAdd">
+                    <xpath>Defs/MemeDef[defName="Tunneler"]/agreeableTraits</xpath>
+                    <value>
+                        <li>VTE_Groundbreaker</li>
+                    </value>
+                </li> -->
+
+            </operations>
+        </match>
+    </Operation>
+</Patch>

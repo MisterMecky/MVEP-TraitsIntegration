@@ -1,0 +1,21 @@
+<ModMetaData>
+  <name>MeckysVEP-IdeologyPatch</name>
+  <description>Adds integration between Vanilla Traits Expanded and Ideology, Vanilla Memes Expanded and Alpha Memes.</description>
+  <author>MisterMecky</author>
+  <supportedVersions>
+    <li>1.3</li>
+  </supportedVersions>
+  <packageId>mistermecky.meckysVEPIdeologyPatch</packageId>
+  <modDependencies>
+		<li>
+			<packageId>Ludeon.RimWorld.Ideology</packageId>
+			<displayName>Ideology</displayName>
+		</li>
+		<li>
+			<packageId>VanillaExpanded.VanillaTraitsExpanded</packageId>
+			<displayName>Vanilla Traits Expanded</displayName>
+			<steamWorkshopUrl>https://steamcommunity.com/sharedfiles/filedetails/?id=2296404655</steamWorkshopUrl>
+			<downloadUrl>https://github.com/AndroidQuazar/VanillaTraitsExpanded</downloadUrl>
+		</li>
+	</modDependencies>
+</ModMetaData>
